@@ -8,6 +8,7 @@ body {
 	font-size: 18px;
 	line-height: 1.3;
 	color: vars.$color-dark;
+	background-color: vars.$color-silver-100;
 }
 
 .logo {
@@ -27,11 +28,20 @@ body {
 	}
 }
 
+.title {
+	margin-bottom: 60px;
+	@extend %rubik-500;
+	font-size: 36px;
+	text-align: center;
+	color: vars.$color-darkBlue-900;
+}
+
 .button {
-	padding: 10px 32px;
+	padding: 12px 32px;
 	font-size: 18px;
 	line-height: 1.3;
 	letter-spacing: 0.03em;
+	white-space: nowrap;
 	border-radius: 5px;
 	color: vars.$color-white;
 	background-color: vars.$color-orange-900;
@@ -79,6 +89,61 @@ body {
 	}
 }
 
+.link-more {
+	font-size: 20px;
+	line-height: 1.5;
+	letter-spacing: 0;
+	color: vars.$color-darkBlue-900;
+	text-underline-offset: 3px;
+	text-decoration: underline 2px;
+	transition: text-decoration-color 0.3s;
+
+	&:focus {
+		text-decoration-color: transparent;
+	}
+
+	&:hover {
+		text-decoration-color: transparent;
+	}
+
+	&:active {
+		text-decoration-color: transparent;
+	}
+}
+
+.filter-btn {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 13px 32px;
+	font-size: 20px;
+	color: vars.$color-darkBlue-900;
+	border-radius: 5px;
+	outline: 1px solid vars.$color-silver-200;
+	transition: outline 0.3s, color 0.3s, background-color 0.3s;
+
+	&:focus {
+		outline: 2px solid rgba(vars.$color-orange-900, 0.7);
+	}
+
+	&:hover {
+		color: vars.$color-orange-900;
+		background-color: rgba(vars.$color-orange-900, 0.1);
+		outline: 2px solid rgba(vars.$color-orange-900, 0.7);
+	}
+
+	&:active {
+		color: vars.$color-darkBlue-900;
+		background-color: vars.$color-white;
+		box-shadow: inset 0 -5px 12px rgba(vars.$color-orange-900, 0.2);
+	}
+
+	&.active {
+		color: vars.$color-white;
+		background-color: vars.$color-orange-900;
+	}
+}
+
 .header {
 	padding: 60px 0;
 
@@ -108,10 +173,28 @@ body {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		position: relative;
 		width: 44px;
 		height: 44px;
 		border-radius: 5px;
 		transition: outline 0.3s, background-color 0.3s, filter 0.3s;
+
+		&::before {
+			content: '4';
+			display: none;
+			position: absolute;
+			top: 8px;
+			right: 3px;
+			width: 14px;
+			height: 14px;
+			padding: 2px 0;
+			font-size: 10px;
+			line-height: 1;
+			border-radius: 50%;
+			color: vars.$color-white;
+			background-color: vars.$color-orange-900;
+			transition: color 0.3s, background-color 0.3s;
+		}
 
 		&:focus {
 			outline: 2px solid rgba(vars.$color-orange-900, 0.7);
@@ -120,10 +203,24 @@ body {
 
 		&:hover {
 			background-color: vars.$color-orange-900;
+
+			&::before {
+				color: vars.$color-orange-900;
+				background-color: vars.$color-white;
+			}
 		}
 
 		&:active {
 			background-color: vars.$color-orange-100;
+
+			&::before {
+				color: vars.$color-white;
+				background-color: vars.$color-orange-900;
+			}
+		}
+
+		&.active::before {
+			display: block;
 		}
 	}
 }
@@ -264,4 +361,101 @@ body {
 	line-height: 1;
 	color: vars.$color-white;
 	background-color: vars.$color-darkBlue-900;
+}
+
+.hero {
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		gap: 134px;
+	}
+
+	&__title {
+		margin-bottom: 20px;
+		@extend %rubik-500;
+		font-size: 66px;
+		color: vars.$color-darkBlue-900;
+		text-transform: uppercase;
+	}
+
+	&__subtitle {
+		display: block;
+		color: vars.$color-orange-900;
+	}
+
+	&__info {
+		max-width: 450px;
+		width: 100%;
+		margin-bottom: 20px;
+		font-size: 20px;
+		line-height: 1.5;
+	}
+
+	&__button {
+		margin-right: 20px;
+	}
+}
+
+.categories {
+	&__filter {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 45px;
+		gap: 20px;
+	}
+
+	&__link {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		grid-gap: 30px;
+		margin-bottom: 60px;
+	}
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	text-align: center;
+	padding: 20px 15px;
+	gap: 10px;
+	border-radius: 5px;
+	outline: 1px solid transparent;
+	transition: outline-color 0.3s;
+
+	&:hover {
+		outline-color: vars.$color-orange-900;
+	}
+
+	&__inner {
+		line-height: 1;
+	}
+
+	&__img {
+		margin: 0 auto 10px;
+	}
+
+	&__name {
+		font-size: 15px;
+	}
+
+	&__price {
+		display: block;
+		@extend %rubik-500;
+		font-size: 15px;
+		line-height: 1.4;
+		color: vars.$color-darkBlue-900;
+		margin-bottom: 10px;
+	}
+
+	&__btn {
+		padding: 7px 14px;
+		font-size: 14px;
+	}
 }

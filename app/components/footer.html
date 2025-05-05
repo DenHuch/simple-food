@@ -3,12 +3,12 @@
 		<div class="footer__wrapper">
 			<form class="subscribe footer__subscribe">
 				<a class="logo footer__logo" href="#">
-					<img class="logo__svg" src="images/logo.svg" alt="Логотип">
+					<img class="logo__svg" src="images/logo.svg" width="200" height="39" alt="Логотип">
 				</a>
 				<label class="subscribe__label" for="footer-email">
-					<input class="subscribe__input" id="footer-email" name="email" type="email" placeholder="Ваш email" required>
+					<input class="subscribe__input" id="footer-email" name="email" type="email" placeholder="Ваш email" required aria-label="Введіть ваш email для підписки">
 				</label>
-				<button class="button subscribe__btn" type="submit">
+				<button class="button subscribe__btn" type="submit" aria-label="Натисніть щоб підписатися">
 					<svg width="17" height="16">
 						<use xlink:href="images/sprite.svg#subscribe"></use>
 					</svg>
@@ -66,38 +66,41 @@
 						<svg width="24" height="24">
 							<use xlink:href="images/sprite.svg#location"></use>
 						</svg>
-						<a class="menu-link contacts__link" href="#">вул. Т.Г.Шевченка, 1</a>
+						<a class="menu-link contacts__link" href="https://maps.app.goo.gl/2dvHYzFHJYi3pxxx9" target="_blank">вул. Т.Г.Шевченка, 1</a>
 					</li>
 					<li class="contacts__item">
 						<svg width="24" height="24">
 							<use xlink:href="images/sprite.svg#calling"></use>
 						</svg>
-						<a class="menu-link contacts__link" href="#">380501112233</a>
+						<a class="menu-link contacts__link" href="tel:380501112233">380501112233</a>
 					</li>
 					<li class="contacts__item">
 						<svg width="24" height="24">
 							<use xlink:href="images/sprite.svg#message"></use>
 						</svg>
-						<a class="menu-link contacts__link" href="#">support@sfood.com</a>
+						<a class="menu-link contacts__link" href="mailto:support@sfood.com">support@sfood.com</a>
 					</li>
 				</ul>
 				<ul class="social">
 					<li class="social__item">
-						<a class="social__link" href="#">
+						<a class="social__link" href="https://www.facebook.com/">
+							<span class="visually-hidden">фейсбук</span>
 							<svg width="10" height="21">
 								<use xlink:href="images/sprite.svg#facebook"></use>
 							</svg>
 						</a>
 					</li>
 					<li class="social__item">
-						<a class="social__link" href="#">
+						<a class="social__link" href="https://x.com/">
+							<span class="visually-hidden">твітер</span>
 							<svg width="21" height="17">
 								<use xlink:href="images/sprite.svg#twitter"></use>
 							</svg>
 						</a>
 					</li>
 					<li class="social__item">
-						<a class="social__link" href="#">
+						<a class="social__link" href="https://www.instagram.com/">
+							<span class="visually-hidden">інстаграм</span>
 							<svg width="20" height="20">
 								<use xlink:href="images/sprite.svg#instagram"></use>
 							</svg>
