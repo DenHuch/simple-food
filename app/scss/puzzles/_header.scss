@@ -1,0 +1,94 @@
+.header {
+	padding: 60px 0;
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		gap: 50px;
+	}
+}
+
+.menu {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: 42px;
+	}
+}
+
+.user-menu {
+	display: flex;
+	gap: 10px;
+
+	&__button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		width: 44px;
+		height: 44px;
+		border-radius: 5px;
+		transition: outline 0.3s, background-color 0.3s, filter 0.3s;
+
+		&:focus {
+			outline: 2px solid rgba($color-primary, 0.7);
+			background-color: rgba($color-primary, 0.1);
+		}
+
+		&:hover {
+			background-color: $color-primary;
+
+			& .user-menu__icon {
+				stroke: $color-white;
+			}
+
+			& .user-menu__bag-count {
+				color: $color-primary;
+				background-color: $color-white;
+			}
+		}
+
+		&:active {
+			background-color: $color-primary-bg;
+
+			& .user-menu__icon {
+				stroke: $color-text-primary;
+			}
+
+			& .user-menu__bag-count {
+				color: $color-white;
+				background-color: $color-primary;
+			}
+		}
+
+		&.active .user-menu__bag-count {
+			display: block;
+		}
+	}
+
+	&__icon {
+		stroke: $color-text-primary;
+		transition: stroke 0.3s;
+	}
+
+	&__bag-count {
+		content: '';
+		display: none;
+		position: absolute;
+		top: 8px;
+		right: 3px;
+		width: 14px;
+		height: 14px;
+		padding: 2px 0;
+		font-size: 10px;
+		line-height: 1;
+		border-radius: 50%;
+		color: $color-white;
+		background-color: $color-primary;
+		transition: color 0.3s, background-color 0.3s;
+	}
+}

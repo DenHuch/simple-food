@@ -1,0 +1,39 @@
+.footer {
+	&__wrapper {
+		display: flex;
+		padding-bottom: 61px;
+		gap: 70px;
+	}
+	
+	&__inner {
+		max-width: 200px;
+		width: 100%;
+	}
+
+	&__logo {
+		display: block;
+		margin-bottom: 30px;
+	}
+
+	&__menu {
+		margin-right: 73px;
+	}
+	
+	&__list {
+		display: grid;
+		grid-template-rows: repeat(4, auto);
+		grid-auto-flow: column;
+		row-gap: 20px;
+    column-gap: 90px;
+	}
+}
+
+.copyright {
+	display: block;
+	text-align: center;
+	padding: 30px 0;
+	font-size: 14px;
+	line-height: 1;
+	color: $color-white;
+	background-color: $color-text-secondary;
+}

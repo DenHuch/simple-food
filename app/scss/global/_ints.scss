@@ -1,0 +1,178 @@
+.logo {
+	border-radius: 5px;
+	transition: outline 0.3s, opacity 0.3s;
+
+	&:focus {
+		outline: 2px solid rgba($color-primary, 0.7);
+	}
+
+	&:hover {
+		opacity: 80%;
+	}
+
+	&:active {
+		opacity: 50%;
+	}
+}
+
+.menu-link {
+	white-space: nowrap;
+	letter-spacing: 0.01em;
+	border-radius: 5px;
+	transition: outline 0.3s, color 0.3s, filter 0.3s;
+
+	&:focus {
+		outline: 2px solid rgba($color-primary, 0.7);
+	}
+
+	&:hover {
+		color: $color-primary;
+	}
+
+	&:active {
+		color: $color-text-primary;
+		filter: drop-shadow(2px 2px 5px rgba($color-text-primary, 0.5));
+	}
+
+	&.active {
+		color: $color-primary;
+	}
+}
+
+.button {
+	padding: 7px 14px;
+	font-size: 14px;
+	white-space: nowrap;
+	border-radius: 6px;
+	color: $color-white;
+	background-color: $color-primary;
+	transition: outline 0.3s, color 0.3s, background-color 0.3s, box-shadow 0.3s;
+
+	&:focus {
+		color: $color-primary;
+		outline: 2px solid rgba($color-primary, 0.7);
+		background-color: rgba($color-primary, 0.1);
+	}
+
+	&:hover {
+		color: $color-primary;
+		background-color: $color-white;
+		outline: 2px solid rgba($color-primary, 0.7);
+		box-shadow: 0 5px 12px 0 rgba($color-primary, 0.2);
+	}
+
+	&:active {
+		color: $color-primary;
+		background-color: rgba($color-primary, 0.1);
+	}
+
+	&--big {
+		padding: 12px 32px;
+		font-size: 18px;
+		letter-spacing: 0.03em;
+	}
+}
+
+.link-more {
+	font-size: 20px;
+	line-height: 1.5;
+	border-radius: 5px;
+	white-space: nowrap;
+	color: $color-text-secondary;
+	text-underline-offset: 3px;
+	text-decoration: underline 2px $color-text-secondary;
+	transition: outline 0.3s, color 0.3s, filter 0.3s, text-decoration-color 0.3s;
+
+	&:focus {
+		outline: 2px solid rgba($color-primary, 0.7);
+		text-decoration-color: transparent;
+	}
+
+	&:hover {
+		color: $color-primary;
+		text-decoration-color: transparent;
+	}
+
+	&:active {
+		color: $color-text-secondary;
+		filter: drop-shadow(2px 2px 5px rgba($color-text-primary, 0.5));
+		text-decoration-color: transparent;
+	}
+
+	&--underline-focus {
+		&:focus {
+			text-decoration-color: $color-text-secondary;
+		}
+	}
+}
+
+.filter {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 45px;
+	gap: 20px;
+
+	&__btn {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		padding: 13px 32px;
+		font-size: 20px;
+		color: $color-text-secondary;
+		background-color: $color-white;
+		border-radius: 5px;
+		outline: 1px solid $color-bg-muted;
+		transition: outline 0.3s, box-shadow 0.3s, color 0.3s, background-color 0.3s;
+
+		&:focus {
+			outline: 2px solid rgba($color-primary, 0.7);
+		}
+
+		&:hover {
+			color: $color-primary;
+			background-color: rgba($color-primary, 0.1);
+			outline: 2px solid rgba($color-primary, 0.7);
+
+			& .filter__icon {
+				fill: $color-primary;
+			}
+		}
+
+		&:active {
+			color: $color-text-secondary;
+			background-color: $color-white;
+			box-shadow: inset 0 -5px 12px rgba($color-primary, 0.2);
+
+			& .filter__icon {
+				fill: $color-text-secondary;
+			}
+		}
+
+		&.active {
+			color: $color-white;
+			background-color: $color-primary;
+
+			& .filter__icon {
+				fill: $color-white;
+			}
+		}
+	}
+
+	&__icon {
+		fill: $color-text-secondary;
+		transition: fill 0.3s;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

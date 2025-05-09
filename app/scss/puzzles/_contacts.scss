@@ -1,0 +1,92 @@
+.contacts {
+	&__list {
+		margin-bottom: 15px;
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		padding: 4px 0;
+		gap: 7px;
+		font-size: 16px;
+		white-space: nowrap;
+		letter-spacing: 0.01em;
+		border-radius: 5px;
+		transition: outline 0.3s, color 0.3s, filter 0.3s;
+
+		&:focus {
+			outline: 2px solid rgba($color-primary, 0.7);
+		}
+
+		&:hover {
+			color: $color-primary;
+
+			& .contacts__icon {
+				stroke: $color-primary;
+			}
+		}
+
+		&:active {
+			color: $color-text-primary;
+			filter: drop-shadow(2px 2px 5px rgba($color-text-primary, 0.5));
+
+			& .contacts__icon {
+				stroke: $color-text-primary;
+			}
+		}
+	}
+
+	&__icon {
+		fill: none;
+		stroke: $color-text-primary;
+		transition: stroke 0.3s;
+	}
+}
+
+.social {
+	display: flex;
+	gap: 13px;
+
+	&__link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 39px;
+		height: 39px;
+		border-radius: 50%;
+		background-color: $color-bg-muted;
+		transition: outline 0.3s, background-color 0.3s;
+
+		&:focus {
+			outline: 2px solid rgba($color-primary, 0.7);
+			background-color: $color-primary-bg;
+		}
+
+		&:hover {
+			background-color: $color-primary;
+
+			& .social__icon {
+				fill: $color-white;
+			}
+		}
+
+		&:active {
+			background-color: $color-primary-bg;
+
+			& .social__icon {
+				fill: $color-primary;
+			}
+		}
+	}
+
+	&__icon {
+		fill: $color-text-primary;
+		transition: fill 0.3s;
+	}
+}

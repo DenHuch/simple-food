@@ -1,55 +1,39 @@
-<!DOCTYPE html>
-<html lang="uk">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>SimpleFood Найшвидший сервіс доставки їжі у вашому місті</title>
-	<link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96">
-	<link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg">
-	<link rel="shortcut icon" href="images/favicon/favicon.ico">
-	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
-	<link rel="manifest" href="images/favicon/site.webmanifest">
-	<link rel="stylesheet" href="css/style.min.css">
-</head>
-
-<body>
-	<div class="wrapper">
-		<header class="header">
-			<div class="container">
-				<div class="header__inner">
-					<a class="logo" href="#">
-						<img class="logo__svg" src="images/logo.svg" width="200" height="39" alt="Логотип">
-					</a>
-					<nav class="menu">
-						<ul class="menu__list">
-							<li class="menu__item">
-								<a class="menu-link active" href="#">Головна</a>
-							</li>
-							<li class="menu__item">
-								<a class="menu-link" href="#">Страви</a>
-							</li>
-							<li class="menu__item">
-								<a class="menu-link" href="#">Контакти</a>
-							</li>
-						</ul>
-						<ul class="actions">
-							<li class="actions__item">
-								<button class="actions__cta" type="button" aria-label="Пошук">
-									<svg width="21" height="21">
-										<use xlink:href="images/sprite.svg#search"></use>
-									</svg>
-								</button>
-							</li>
-							<li class="actions__item">
-								<button class="actions__cta active" type="button" aria-label="Корзина">
-									<svg width="21" height="20">
-										<use xlink:href="images/sprite.svg#shopping-bag"></use>
-									</svg>
-								</button>
-							</li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</header>
+<header class="header">
+	<div class="container">
+		<div class="header__inner">
+			<a class="logo" href="#">
+				<img class="logo__img" src="images/logo.svg" width="200" height="39" alt="Логотип SimpleFood">
+			</a>
+			<nav class="menu">
+				<ul class="menu__list">
+					<li class="menu__item">
+						<a class="menu-link active" href="#">Головна</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu-link" href="#">Страви</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu-link" href="#">Контакти</a>
+					</li>
+				</ul>
+				<ul class="actions">
+					<li class="actions__item">
+						<button class="actions__cta" type="button">
+							<span class="sr-only">пошукове меню</span>
+							<svg class="user-menu__icon" width="21" height="21">
+								<use href="images/sprite.svg#icon-search"></use>
+							</svg>
+						</button>
+					</li>
+					<li class="actions__item">
+						<button class="actions__cta active" type="button">
+							<svg class="user-menu__icon" width="21" height="20">
+								<use href="images/sprite.svg#icon-shopping-bag"></use>
+							</svg>
+						</button>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>

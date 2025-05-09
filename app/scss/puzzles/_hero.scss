@@ -1,0 +1,50 @@
+.hero {
+	&__content {
+		display: flex;
+		align-items: center;
+		gap: 134px;
+		height: calc(100vh - 164px);
+
+		&::after {
+			content: '';
+			display: block;
+			width: 560px;
+			height: 660px;
+			background-image: image-set(
+				url('../images/scooter-guy.avif') type('image.avif'),
+				url('../images/scooter-guy.webp') type('image.webp'),
+				url('../images/scooter-guy.png')
+			);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+	}
+
+	&__title {
+		margin-bottom: 20px;
+		font-size: 66px;
+		font-weight: 500;
+		color: $color-text-secondary;
+		text-transform: uppercase;
+	}
+
+	&__subtitle {
+		display: block;
+		color: $color-primary;
+	}
+
+	&__info {
+		max-width: 450px;
+		width: 100%;
+		margin-bottom: 20px;
+		font-size: 20px;
+		line-height: 1.5;
+	}
+
+	&__actions {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+	}
+}
