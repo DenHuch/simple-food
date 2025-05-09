@@ -6,7 +6,10 @@
 		margin-bottom: 60px;
 	}
 
-	&__inner {
-		text-align: center;
+	&__link {
+		display: inline-block;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 }
