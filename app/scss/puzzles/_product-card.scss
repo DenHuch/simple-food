@@ -16,6 +16,23 @@
 		outline-color: $color-primary;
 	}
 
+	&__link {
+		border-radius: 5px;
+		transition: outline 0.3s, opacity 0.3s;
+
+		&:focus {
+			outline: 2px solid rgba($color-primary, 0.7);
+		}
+	
+		&:hover {
+			opacity: 80%;
+		}
+	
+		&:active {
+			opacity: 50%;
+		}
+	}
+
 	&__name {
 		font-size: 15px;
 		line-height: 1;

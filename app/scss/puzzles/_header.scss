@@ -11,7 +11,7 @@
 .menu {
 	display: flex;
 	justify-content: space-between;
-	width: 100%;
+	flex-grow: 1;
 
 	&__list {
 		display: flex;
