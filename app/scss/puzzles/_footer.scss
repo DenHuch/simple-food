@@ -1,6 +1,7 @@
 .footer {
 	&__wrapper {
 		display: flex;
+		align-items: flex-start;
 		padding-bottom: 61px;
 		gap: 70px;
 	}
@@ -15,13 +16,10 @@
 	}
 
 	&__menu {
-		margin-right: 73px;
-	}
-	
-	&__list {
 		display: grid;
 		grid-template-rows: repeat(4, auto);
 		grid-auto-flow: column;
+		margin-right: 73px;
 		row-gap: 20px;
     column-gap: 90px;
 	}
