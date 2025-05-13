@@ -12,11 +12,14 @@
 	display: flex;
 	justify-content: space-between;
 	flex-grow: 1;
+	gap: 30px;
 
 	&__list {
 		display: flex;
 		align-items: center;
-		gap: 42px;
+		justify-content: flex-end;
+		flex-wrap: wrap;
+		gap: 10px 42px;
 	}
 }
 

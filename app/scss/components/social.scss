@@ -1,0 +1,42 @@
+.social {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 13px;
+
+	&__link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 39px;
+		height: 39px;
+		border-radius: 50%;
+		background-color: $color-bg-muted;
+		transition: outline 0.3s, background-color 0.3s;
+
+		&:focus {
+			outline: 2px solid rgba($color-primary, 0.7);
+			background-color: $color-primary-bg;
+		}
+
+		&:hover {
+			background-color: $color-primary;
+
+			& .social__icon {
+				fill: $color-white;
+			}
+		}
+
+		&:active {
+			background-color: $color-primary-bg;
+
+			& .social__icon {
+				fill: $color-primary;
+			}
+		}
+	}
+
+	&__icon {
+		fill: $color-text-primary;
+		transition: fill 0.3s;
+	}
+}
