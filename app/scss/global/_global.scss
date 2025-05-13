@@ -41,7 +41,8 @@ body {
 }
 
 @import 'ints';
-@import 'puzzles/subscribe-form';
-@import 'puzzles/product-card';
-@import 'puzzles/contacts';
-
+@import 'header';
+@import 'footer';
+@import 'components/subscribe-form';
+@import 'components/product-card';
+@import 'components/contacts';
