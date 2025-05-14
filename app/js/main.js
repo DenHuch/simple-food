@@ -21,4 +21,16 @@ document.addEventListener('DOMContentLoaded', function () {
 			link.classList.toggle('active')
 		})
 	})
+
+	const swiper = new Swiper('.reviews__slider', {
+		pagination: {
+			el: '.reviews__pagination',
+			clickable: true,
+		},
+
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
 })

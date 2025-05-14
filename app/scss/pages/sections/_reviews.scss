@@ -1,0 +1,147 @@
+.reviews {
+	&__content {
+		padding-right: 90px;
+		padding-left: 90px;
+	}
+
+	&__slide {
+		display: flex;
+		align-items: center;
+		gap: 38px;
+		margin-bottom: 25px;
+	}
+
+	&__quote {
+		padding: 0 42px 0;
+	}
+
+	&__quote-text {
+		position: relative;
+		font-size: 20px;
+		line-height: 1.5;
+		font-style: italic;
+		margin-bottom: 30px;
+	}
+
+	&__icon-quote {
+		position: absolute;
+		fill: $color-placeholder;
+
+		&--left {
+			top: 0;
+			left: -42px;
+		}
+
+		&--right {
+			bottom: 0;
+			right: -42px;
+		}
+	}
+
+	&__author-img {
+		border-radius: 50%;
+	}
+
+	&__author-name {
+		display: block;
+		margin-bottom: 16px;
+		font-size: 20px;
+		font-weight: 500;
+		font-style: normal;
+		color: $color-primary;
+	}
+
+	&__author-role {
+		display: block;
+		font-size: 14px;
+	}
+
+	&__controls {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 2px 0;
+		gap: 20px;
+	}
+
+	&__arrow {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 40px;
+		height: 40px;
+		border: 3px solid $color-placeholder;
+		border-radius: 50%;
+		cursor: pointer;
+		transition: outline 0.3s, border-color 0.3s, background-color 0.3s;
+
+		&:focus {
+			outline: 2px solid rgba($color-primary, 0.7);
+		}
+
+		&:hover {
+			border-color: rgba($color-primary, 0.5);
+			background-color: $color-primary-bg;
+
+			& .reviews__icon-arrow {
+				fill: rgba($color-primary, 0.5);
+				stroke: rgba($color-primary, 0.5);
+			}
+		}
+
+		&:active {
+			background-color: $color-primary-bg;
+
+			& .reviews__icon-arrow {
+				fill: $color-primary;
+				stroke: $color-primary;
+			}
+		}
+
+		&.swiper-button-disabled {
+			border-color: $color-primary;
+
+			& .reviews__icon-arrow {
+				fill: $color-primary;
+				stroke: $color-primary;
+			}
+		}
+	}
+
+	&__icon-arrow {
+		fill: $color-placeholder;
+		stroke: $color-placeholder;
+		transition: fill 0.3s, stroke 0.3s;
+	}
+
+	&__pagination {
+		display: flex;
+		gap: 15px;
+
+		& .swiper-pagination-bullet {
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			background-color: $color-placeholder;
+			cursor: pointer;
+			transition: outline 0.3s, background-color 0.3s;
+
+			&:focus {
+				outline: 2px solid $color-primary;
+			}
+
+			&:hover {
+				outline: 2px solid rgba($color-primary, 0.5);
+				background-color: $color-primary;
+			}
+
+			&:active {
+				background-color: rgba($color-primary, 0.5);
+			}
+		}
+
+		& .swiper-pagination-bullet-active {
+			background-color: $color-primary;
+		}
+	}
+}

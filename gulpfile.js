@@ -21,14 +21,10 @@ function html() {
 }
 
 function styles() {
-	return src('app/scss/*.scss')
+	return src('app/scss/style.scss')
 		.pipe(autoprefixer())
 		.pipe(concat('style.min.css'))
-		.pipe(
-			scss({
-				style: 'compressed',
-			})
-		)
+		.pipe(scss({ style: 'compressed' }))
 		.pipe(dest('app/css'))
 		.pipe(browserSync.stream())
 }
@@ -36,6 +32,7 @@ function styles() {
 function scripts() {
 	return src([
 		'node_modules/mixitup/dist/mixitup.js',
+		'node_modules/swiper/swiper-bundle.js',
 		'app/js/main.js'
 	])
 		.pipe(concat('main.min.js'))
