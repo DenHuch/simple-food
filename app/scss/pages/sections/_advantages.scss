@@ -34,28 +34,27 @@
 	}
 
 	&__item {
-		padding-left: 64px;
+		display: flex;
+		align-items: center;
+		gap: 30px;
 		font-size: 24px;
 		line-height: 1.5;
 		color: $color-text-secondary;
-		background-repeat: no-repeat;
-		background-position: left;
-		background-size: contain;
 
 		&:not(:last-child) {
 			margin-bottom: 20px;
 		}
+	}
 
-		&--time {
-			background-image: url('../images/src/time.svg');
+	&__icon {
+		&--timer {
+			fill: #ff6838;
 		}
-
 		&--courier {
-			background-image: url('../images/src/courier.svg');
+			fill: #0af;
 		}
-
 		&--shop {
-			background-image: url('../images/src/shop.svg');
+			fill: #f22;
 		}
 	}
 }
