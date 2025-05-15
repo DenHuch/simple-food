@@ -1,0 +1,45 @@
+.get-app {
+  &__content {
+		display: flex;
+		align-items: center;
+		background-image: url('../images/src/get-app.jpg');
+		background-repeat: no-repeat;
+		background-position: right;
+		background-size: contain;
+	}
+
+  &__inner {
+		max-width: 470px;
+		width: 100%;
+		padding: 40px 0;
+	}
+
+	&__title {
+		text-align: left;
+		margin-bottom: 45px;
+	}
+
+  &__text {
+		font-size: 20px;
+		line-height: 1.5;
+		margin-bottom: 30px;
+	}
+
+  &__list {
+		display: flex;
+		gap: 30px;
+	}
+
+  &__link {
+		display: block;
+		width: 120px;
+		height: 40px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+
+		&--play-store {
+			width: 135px;
+		}
+	}
+}

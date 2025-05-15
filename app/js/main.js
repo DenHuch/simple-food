@@ -23,11 +23,14 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 	const swiper = new Swiper('.reviews__slider', {
+		spaceBetween: 30,
 		pagination: {
 			el: '.reviews__pagination',
 			clickable: true,
 		},
-
+		keyboard: {
+			enabled: true,
+		},
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
