@@ -3,10 +3,8 @@
 		display: flex;
 		align-items: center;
 		justify-content: right;
-		min-height: 585px;
 		padding-right: 70px;
 		padding-left: 70px;
-		background-image: url('../images/src/food-delivery.png');
 		background-repeat: no-repeat;
 		background-position: 70px center;
 		background-size: contain;
@@ -15,6 +13,7 @@
 	&__inner {
 		max-width: 470px;
 		width: 100%;
+		padding: 58px 0;
 	}
 
 	&__title {
